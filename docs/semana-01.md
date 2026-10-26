@@ -28,11 +28,36 @@ sequenceDiagram
 
 ### Experimento 1: Netcat Nu & Falha 400 Bad Request
 * **Comando Testado:** `nc -C example.com 80` sem o header `Host:`
-* **Resultado:** [Descreva o código de status retornado e por que o Virtual Hosting exige o campo Host no HTTP/1.1]
+* **Resultado:** 
+PS C:\WINDOWS\system32> ncat -C example.com 80
+GET / HTTP/1.1
+User-Agent: TerminalCC/1.0
+Connection: close
+
+
+HTTP/1.1 400 Bad Request
+Server: cloudflare
+Date: Mon, 26 Oct 2026 02:31:40 GMT
+Content-Type: text/html
+Content-Length: 155
+Connection: close
+CF-RAY: -
+
+<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+<hr><center>cloudflare</center>
+</body>
+</html>
 
 ### Experimento 2: Semântica dos Métodos HTTP
 * **Análise dos Verbos:** Explique a diferença observada entre chamadas `GET`, `POST` e `OPTIONS`.
 * **Header Content-Length:** Como o tamanho do payload afeta a leitura no buffer do socket?
+* Analise dos verbos: Em get, não se é utilizado argumentos, em post, se utiliza os argumentos -x e -v, e em options, se utiliza os argumentos -i -x
+* O tamanho do payload afeta a leitura no buffer aumentando o content-lenth
+
+
 
 ### Experimento 3: URL, Query Strings & Percent-Encoding
 * **URL Testada: (Passo 1)** curl -v http://httpbin.org/get?curso=Engenharia da Computacao
