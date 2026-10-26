@@ -1,6 +1,6 @@
 # Memória de Desenvolvimento — Semana 01: Protocolo HTTP & Sockets Bare-Metal
-**Aluno:** [Gabriel da Silva Gomes]  
-**Matrícula:** [202421200056]  
+**Aluno:** Gabriel da Silva Gomes  
+**Matrícula:** 202421200056  
 **Curso:** Sistemas da Informação  
 
 ---
