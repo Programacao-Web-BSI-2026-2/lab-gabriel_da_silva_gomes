@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aula de HTML e CSS">
-    <title></title>
+    <title>Laboratorio de Aula HTML</title>
 </head>
 <body>
-    <div id="cabecalho">
-        <div class="titulo">Área de Contato do Cliente</div>
-        <div class="menu">
+    <header id="cabecalho">
+        <nav class="titulo">Área de Contato do Cliente</nav>
+        <nav class="menu">
             <a href="#">Ajuda</a> | <a href="#">Sair</a>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <div id="corpo-da-pagina">
-        <div class="subtitulo">Envie sua mensagem para a nossa equipe de suporte backend</div>
+    <main id="corpo-da-pagina">
+        <nav class="subtitulo">Envie sua mensagem para a nossa equipe de suporte backend</nav>
         
-        <form action="/enviar" method="GET">
+        <article action="/enviar" method="GET">
             Nome: <input type="text" name="nome"><br><br>
             Email: <input type="text" name="email"><br><br>
             Telefone Celular: <input type="text" name="celular"><br><br>
             Mensagem: <textarea name="msg"></textarea><br><br>
             
             <input type="button" value="Disparar Dados">
-        </form>
-    </div>
+        </article>
+    </main>
 
-    <div id="rodape">
+    <footer id="rodape">
         Suporte Tech 2026
-    </div>
+    </footer>
 </body>
 </html>
