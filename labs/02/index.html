@@ -1,0 +1,36 @@
+<!-- CÓDIGO LEGADO: Estrutura sem semântica, sem acessibilidade e sem envio de arquivo -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aula de HTML, formularios">
+    <title>Laboratorio de Aula HTML: Modernização de Formulario </title>
+</head>
+<body>
+    
+    <form action="https://httpbin.org/post " method="post" enctype="multipart/form-data" >
+        <fieldset>
+            <legend>Abrir Chamado Técnico</legend>
+
+                <label for="inpNome">Nome Completo:</label>
+                <input type="text" name="nome" id="inpNome" required>
+                  
+                <label for="inpEmail">E-mail de Contato:</label>
+                <input type="email" name="email" id="inpEmail" required>
+              
+                <label for="inpPrioridade">Prioridade:</label>
+                <select name="prioridade" inpPrioridade>
+                    <option>Baixa</option>
+                    <option>Média</option>
+                    <option>Alta</option>
+                </select>
+           
+                <label for="inpAnexo">Arquivo de Log ou Print (PNG/PDF):</label>
+                <input type="file" name="anexo" id="inpAnexo" accept="image/png,application/pdf" aria-describedby="instrucao-arquivo"required>
+                <label for="instrucao-arquivo"> Apenas arquivos png e pdf</label>
+        
+            <button type="submit">Enviar Chamado</button>
+        </fieldset>
+    </form>
+</body>
